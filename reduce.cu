@@ -3,15 +3,14 @@
 #include <chrono>
 #include <cassert>
 
-int blockThreads{256};
 
 
 /***
    first argument is the approach
-   0: cpu_outplace, 1: cpu_inplace, 2: gpu_outplace, 3: gpu_inplace
-   second argument is row
-   third argument is column
+0: sequential, 1: reduce1, 2: reduce2, 3: reduce3, 4: reduce4, 5:reduce5 
+   second argument is the number of elements
 ***/
+
 
 __device__ void warpReduce(volatile unsigned int* sdata, const unsigned int tid, const unsigned int elements){
     if(elements > 32)    sdata[tid] += sdata[tid + 32];
