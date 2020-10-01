@@ -132,7 +132,7 @@ __global__ void kernel1(unsigned int* d_in, unsigned int* d_out, const unsigned 
 
 void reduce_sum(const int approach, unsigned int& elements){
     unsigned int numBlocks = 0;
-    int numThreads = 256;
+    int numThreads = 1024;
 
     unsigned int originalElements = elements;
 
