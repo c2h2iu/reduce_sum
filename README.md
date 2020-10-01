@@ -11,6 +11,7 @@ Cuda program for reduce sum of an array. The codes are based on https://develope
 "elements" represent the array size which is the power of 2 only.
 
 ----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
 
 # reduce_api
 This api is develped based on the approach 5 introduced in the above document. An example code demonstrates the usage. This api allows arbitrary array length from 1 to 1800000.
