@@ -59,7 +59,7 @@ namespace chiu{
     T reduce(I beg, I end, T& init, C&& bop){
         unsigned int length = std::distance(beg, end); 
 	
-	if(length == 1)    return init + *beg;
+	if(length == 1)    return bop(init, *beg);
 
         using U = typename std::decay<decltype(*beg)>::type; 
 	
@@ -118,7 +118,7 @@ namespace chiu{
     struct minimum{
         __host__ __device__
 	constexpr T operator()(const T &lhs, const T &rhs) const{
-            return (lhs < rhs) ? lhs : rhs:
+            return (lhs < rhs) ? lhs : rhs;
 	}
     };
 }
