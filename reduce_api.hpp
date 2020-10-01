@@ -104,6 +104,23 @@ namespace chiu{
         }        
     };
 
+
+    template<typename T>
+    struct maximum{
+        __host__ __device__
+	constexpr T operator()(const T &lhs, const T &rhs) const{
+            return (lhs > rhs) ? lhs : rhs;
+	}
+    };
+
+
+    template<typename T>
+    struct minimum{
+        __host__ __device__
+	constexpr T operator()(const T &lhs, const T &rhs) const{
+            return (lhs < rhs) ? lhs : rhs:
+	}
+    };
 }
 
 
