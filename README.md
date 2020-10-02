@@ -15,6 +15,9 @@ Cuda program for reduce sum of an array. The codes are based on https://develope
 
 # reduce_api
 This api is develped based on the approach 5 introduced in the above document. An example code demonstrates the usage. This api allows arbitrary array length from 1 to 1800000.
+The example.cu provides a sample code of using this api. To compile this cu file, please add --extended-lambda flag. 
+
+
 
 # Usage:
 ./example length
