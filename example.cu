@@ -11,7 +11,7 @@
 
 
 
-int main(int argc, char* argv[]){	
+int main(int argc, char* argv[]){ 
     unsigned int length = std::stoi(argv[1]);
     
     int init = 100;
@@ -29,7 +29,7 @@ int main(int argc, char* argv[]){
         }
     ); 
     
-    assert(my_sum == verify(array,init, [](unsigned a, unsigned b){ return a+b;}));
+    assert(my_sum == verify(array,init, [](unsigned a, unsigned b){ return a+b; }));
 
     std::cout << "array of " << length << " elements passed.\n";
     
